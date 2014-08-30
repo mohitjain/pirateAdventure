@@ -76,6 +76,7 @@
 {
     CCTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tile.story;
+    self.backgroundImageView.image = tile.backgroundImage;
 }
 
 
