@@ -35,6 +35,9 @@
 		E4DBDD0319B1632200F22F22 /* PirateTreasure.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E4DBDCF719B1632200F22F22 /* PirateTreasure.jpeg */; };
 		E4DBDD0419B1632200F22F22 /* PirateTreasurer2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E4DBDCF819B1632200F22F22 /* PirateTreasurer2.jpeg */; };
 		E4DBDD0519B1632200F22F22 /* PirateWeapons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E4DBDCF919B1632200F22F22 /* PirateWeapons.jpeg */; };
+		E4DBDD0819B1CB4C00F22F22 /* CCWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0719B1CB4C00F22F22 /* CCWeapon.m */; };
+		E4DBDD0B19B1CB8A00F22F22 /* CCArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */; };
+		E4DBDD0E19B1CBF800F22F22 /* CCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,12 @@
 		E4DBDCF719B1632200F22F22 /* PirateTreasure.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PirateTreasure.jpeg; sourceTree = "<group>"; };
 		E4DBDCF819B1632200F22F22 /* PirateTreasurer2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PirateTreasurer2.jpeg; sourceTree = "<group>"; };
 		E4DBDCF919B1632200F22F22 /* PirateWeapons.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PirateWeapons.jpeg; sourceTree = "<group>"; };
+		E4DBDD0619B1CB4C00F22F22 /* CCWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCWeapon.h; sourceTree = "<group>"; };
+		E4DBDD0719B1CB4C00F22F22 /* CCWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCWeapon.m; sourceTree = "<group>"; };
+		E4DBDD0919B1CB8A00F22F22 /* CCArmor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCArmor.h; sourceTree = "<group>"; };
+		E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCArmor.m; sourceTree = "<group>"; };
+		E4DBDD0C19B1CBF800F22F22 /* CCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCharacter.h; sourceTree = "<group>"; };
+		E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +199,12 @@
 				E4DBDCE919B14A6700F22F22 /* Factory */,
 				E4DBDCE619B146FC00F22F22 /* CCTile.h */,
 				E4DBDCE719B146FC00F22F22 /* CCTile.m */,
+				E4DBDD0619B1CB4C00F22F22 /* CCWeapon.h */,
+				E4DBDD0719B1CB4C00F22F22 /* CCWeapon.m */,
+				E4DBDD0919B1CB8A00F22F22 /* CCArmor.h */,
+				E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */,
+				E4DBDD0C19B1CBF800F22F22 /* CCCharacter.h */,
+				E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,8 +350,11 @@
 				E4DBDCBF19B1412100F22F22 /* CCAppDelegate.m in Sources */,
 				E4DBDCEC19B14A8000F22F22 /* CCFactory.m in Sources */,
 				E4DBDCBB19B1412100F22F22 /* main.m in Sources */,
+				E4DBDD0E19B1CBF800F22F22 /* CCCharacter.m in Sources */,
 				E4DBDCC519B1412100F22F22 /* CCViewController.m in Sources */,
 				E4DBDCE819B146FC00F22F22 /* CCTile.m in Sources */,
+				E4DBDD0B19B1CB8A00F22F22 /* CCArmor.m in Sources */,
+				E4DBDD0819B1CB4C00F22F22 /* CCWeapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

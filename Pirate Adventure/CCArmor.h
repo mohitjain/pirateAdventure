@@ -1,5 +1,5 @@
 //
-//  CCFactory.h
+//  CCArmor.h
 //  Pirate Adventure
 //
 //  Created by Mohit Jain on 30/08/14.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCCharacter.h"
 
-@interface CCFactory : NSObject
+@interface CCArmor : NSObject
 
--(NSArray *)tiles;
--(CCCharacter *)charater;
+@property(strong, nonatomic) NSString *name;
+@property( nonatomic) int health;
+
 
 @end
