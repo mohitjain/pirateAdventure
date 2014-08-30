@@ -22,7 +22,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     CCFactory *factory = [[CCFactory alloc] init];
     self.tiles = [factory tiles];
+    self.character = [factory character];
     self.currentPoint = CGPointMake(0, 0);
+    [self updateCharacterStatsForArmor:nil withWeapons:nil withHealthEffect:0];
     [self updateTile];
     [self updateButton];
 }
@@ -35,7 +37,9 @@
 
 - (IBAction)actionButtonPressed:(UIButton *)sender
 {
-    
+    CCTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealthEffect:tile.healthEffect];
+    [self updateTile];
 }
 
 
@@ -51,7 +55,7 @@
 - (IBAction)southButtonPressed:(UIButton *)sender
 {
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
-        NSLog(@"SouthButtonPressed");
+    NSLog(@"SouthButtonPressed");
     [self updateButton];
     [self updateTile];
 }
@@ -66,7 +70,7 @@
 - (IBAction)eastButtonPressed:(UIButton *)sender
 {
     self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.y);
-        NSLog(@"EastButtonPressed");
+    NSLog(@"EastButtonPressed");
     [self updateButton];
     [self updateTile];
 }
@@ -77,6 +81,11 @@
     CCTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tile.story;
     self.backgroundImageView.image = tile.backgroundImage;
+    self.damangeLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    self.healthLabel.text = [NSString stringWithFormat:@"%i",self.character.health];
+    self.weaponLabel.text = self.character.weapon.name;
+    self.armorLabel.text = self.character.armor.name;
+    [self.actionButton setTitle:tile.actionButtonName forState:UIControlStateNormal];
 }
 
 
@@ -89,7 +98,7 @@
 
 - (BOOL) tilesExistsAtPoint:(CGPoint)point{
     
-
+    
     if(point.y >= 0 && point.x >= 0 && point.x < [self.tiles count] && point.y < [[self.tiles objectAtIndex:point.x] count])
     {
         return NO;
@@ -99,6 +108,27 @@
         return YES;
     }
     
+}
+
+-(void) updateCharacterStatsForArmor:(CCArmor *) armor withWeapons:(CCWeapon *) weapon withHealthEffect:(int) healthEffect
+{
+    if (armor != nil){
+        self.character.health = self.character.health - self.character.armor.health + armor.health;
+        self.character.armor = armor;
+    }
+    else if (weapon != nil)
+    {
+        self.character.damage = self.character.damage - self.character.weapon.damage + weapon.damage;
+        self.character.weapon = weapon;
+    }
+    else if (healthEffect != 0)
+    {
+        self.character.health = self.character.health + healthEffect;
+    }
+    else{
+        self.character.health = self.character.health + self.character.armor.health;
+        self.character.damage = self.character.damage + self.character.weapon.damage;
+    }
 }
 
 @end
