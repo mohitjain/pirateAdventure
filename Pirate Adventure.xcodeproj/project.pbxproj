@@ -21,6 +21,8 @@
 		E4DBDCD019B1412100F22F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DBDCB219B1412100F22F22 /* UIKit.framework */; };
 		E4DBDCD819B1412100F22F22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4DBDCD619B1412100F22F22 /* InfoPlist.strings */; };
 		E4DBDCDA19B1412100F22F22 /* Pirate_AdventureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDCD919B1412100F22F22 /* Pirate_AdventureTests.m */; };
+		E4DBDCE819B146FC00F22F22 /* CCTile.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDCE719B146FC00F22F22 /* CCTile.m */; };
+		E4DBDCEC19B14A8000F22F22 /* CCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDCEB19B14A8000F22F22 /* CCFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		E4DBDCD519B1412100F22F22 /* Pirate AdventureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pirate AdventureTests-Info.plist"; sourceTree = "<group>"; };
 		E4DBDCD719B1412100F22F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4DBDCD919B1412100F22F22 /* Pirate_AdventureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pirate_AdventureTests.m; sourceTree = "<group>"; };
+		E4DBDCE619B146FC00F22F22 /* CCTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTile.h; sourceTree = "<group>"; };
+		E4DBDCE719B146FC00F22F22 /* CCTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTile.m; sourceTree = "<group>"; };
+		E4DBDCEA19B14A8000F22F22 /* CCFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFactory.h; sourceTree = "<group>"; };
+		E4DBDCEB19B14A8000F22F22 /* CCFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		E4DBDCB419B1412100F22F22 /* Pirate Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				E4DBDCE519B146C400F22F22 /* Model */,
 				E4DBDCBD19B1412100F22F22 /* CCAppDelegate.h */,
 				E4DBDCBE19B1412100F22F22 /* CCAppDelegate.m */,
 				E4DBDCC019B1412100F22F22 /* Main.storyboard */,
@@ -150,6 +157,25 @@
 				E4DBDCD619B1412100F22F22 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4DBDCE519B146C400F22F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4DBDCE919B14A6700F22F22 /* Factory */,
+				E4DBDCE619B146FC00F22F22 /* CCTile.h */,
+				E4DBDCE719B146FC00F22F22 /* CCTile.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4DBDCE919B14A6700F22F22 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E4DBDCEA19B14A8000F22F22 /* CCFactory.h */,
+				E4DBDCEB19B14A8000F22F22 /* CCFactory.m */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DBDCBF19B1412100F22F22 /* CCAppDelegate.m in Sources */,
+				E4DBDCEC19B14A8000F22F22 /* CCFactory.m in Sources */,
 				E4DBDCBB19B1412100F22F22 /* main.m in Sources */,
 				E4DBDCC519B1412100F22F22 /* CCViewController.m in Sources */,
+				E4DBDCE819B146FC00F22F22 /* CCTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
