@@ -38,6 +38,7 @@
 		E4DBDD0819B1CB4C00F22F22 /* CCWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0719B1CB4C00F22F22 /* CCWeapon.m */; };
 		E4DBDD0B19B1CB8A00F22F22 /* CCArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */; };
 		E4DBDD0E19B1CBF800F22F22 /* CCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */; };
+		E4DBDD1119B203D400F22F22 /* CCBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBDD1019B203D400F22F22 /* CCBoss.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCArmor.m; sourceTree = "<group>"; };
 		E4DBDD0C19B1CBF800F22F22 /* CCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCharacter.h; sourceTree = "<group>"; };
 		E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCharacter.m; sourceTree = "<group>"; };
+		E4DBDD0F19B203D400F22F22 /* CCBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBoss.h; sourceTree = "<group>"; };
+		E4DBDD1019B203D400F22F22 /* CCBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBoss.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				E4DBDD0A19B1CB8A00F22F22 /* CCArmor.m */,
 				E4DBDD0C19B1CBF800F22F22 /* CCCharacter.h */,
 				E4DBDD0D19B1CBF800F22F22 /* CCCharacter.m */,
+				E4DBDD0F19B203D400F22F22 /* CCBoss.h */,
+				E4DBDD1019B203D400F22F22 /* CCBoss.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				E4DBDCE819B146FC00F22F22 /* CCTile.m in Sources */,
 				E4DBDD0B19B1CB8A00F22F22 /* CCArmor.m in Sources */,
 				E4DBDD0819B1CB4C00F22F22 /* CCWeapon.m in Sources */,
+				E4DBDD1119B203D400F22F22 /* CCBoss.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

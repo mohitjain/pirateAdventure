@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CCCharacter.h"
+#import "CCBoss.h"
 @interface CCViewController : UIViewController
 
 
@@ -16,6 +17,7 @@
 @property (nonatomic) CGPoint currentPoint;
 @property (strong, nonatomic) NSArray *tiles;
 @property (strong, nonatomic) CCCharacter *character;
+@property (strong, nonatomic) CCBoss *boss;
 
 //IBOutlets
 
@@ -39,5 +41,6 @@
 - (IBAction)westButtonPressed:(UIButton *)sender;
 - (IBAction)southButtonPressed:(UIButton *)sender;
 - (IBAction)nothButtonPressed:(UIButton *)sender;
+- (IBAction)resetButtonPressed:(UIButton *)sender;
 
 @end

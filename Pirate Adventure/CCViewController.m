@@ -21,24 +21,41 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     CCFactory *factory = [[CCFactory alloc] init];
+    
     self.tiles = [factory tiles];
     self.character = [factory character];
+    self.boss = [factory boss];
+    
     self.currentPoint = CGPointMake(0, 0);
     [self updateCharacterStatsForArmor:nil withWeapons:nil withHealthEffect:0];
     [self updateTile];
     [self updateButton];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+
 - (IBAction)actionButtonPressed:(UIButton *)sender
 {
     CCTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    if(tile.healthEffect == -15){
+        self.boss.health = self.boss.health - self.character.damage;
+    }
     [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealthEffect:tile.healthEffect];
+    if (self.character.health <= 0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died. Please restart the Game!!!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+    }
+    else if(self.boss.health <= 0){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have won. Please restart the Game!!!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+    }
     [self updateTile];
 }
 
@@ -67,6 +84,14 @@
     [self updateTile];
 }
 
+- (IBAction)resetButtonPressed:(UIButton *)sender {
+    
+    self.character = nil;
+    self.boss = nil;
+    [self viewDidLoad]  ;
+    
+}
+
 - (IBAction)eastButtonPressed:(UIButton *)sender
 {
     self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.y);
@@ -75,6 +100,7 @@
     [self updateTile];
 }
 
+#pragma mark - Helper Methods
 
 - (void) updateTile
 {

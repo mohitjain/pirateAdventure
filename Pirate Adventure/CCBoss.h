@@ -1,5 +1,5 @@
 //
-//  CCFactory.h
+//  CCBoss.h
 //  Pirate Adventure
 //
 //  Created by Mohit Jain on 30/08/14.
@@ -7,14 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCCharacter.h"
-#import "CCBoss.h"
 
-@interface CCFactory : NSObject
+@interface CCBoss : NSObject
 
--(NSArray *)tiles;
--(CCCharacter *)character;
--(CCBoss *)boss;
-
+@property(nonatomic) int health;
 
 @end
